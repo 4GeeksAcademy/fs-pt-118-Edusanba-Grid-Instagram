@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed With Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                
+                <div class="d-flex align-right justify-content-end">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Nuevo Post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownbuttonmenu1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownbuttonmenu1">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Acceso</a></li>
+                            <li><a class="dropdown-item" href="#">Privacidad y datos</a></li>
+                            <li><hr class="dropdown-div"</li>
+                            <li><a class="dropdown-item text-danger" href="#">Desconexión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">New </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+                <div class="modal-body">
+                    <h6>Caption:</h6>
+                    <textarea class="form-control" placeholder="Add the caption of your post here" id="floatingtextarea"></textarea>
+                    <div class="row">
+                        <button class="col-1 border rounded btn-light">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 border rounded btn-light">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>    
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Publicar</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GRID-->
+    <div class="container-fluid p-2">
+        <ul class="nav nav-pill justify-content-center" id="mytab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="hometab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profiletab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="mycontent">
+            <!--3 fotos-->
+            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://preview.redd.it/tener-una-imagen-random-hace-que-la-publicaci%C3%B3n-tenga-m%C3%A1s-v0-6frn21rqrtoc1.jpeg?width=640&crop=smart&auto=webp&s=e109a6ff409c369a7be16d3b7d8c885fa69c8abf" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqfGhQs0MSBUUUPH50Ppt1hJj4I7TPq7PV5Q&s" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRubQH1F3DZWpm3WYs5SKpQBSH_ocCYenGjkA&s" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/236x/f4/a6/14/f4a614740649d8c495ddc7a55a2cf0d9.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/736x/3d/c0/fc/3dc0fccbae8b2b93e83b51f5e7c4672b.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://e00-elmundo.uecdn.es/assets/multimedia/imagenes/2018/03/28/15222363072573.jpg" class="img-fluid w-100" alt=""></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/236x/08/4a/36/084a361cc42a063de30f54782faae5e0.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/236x/1c/58/87/1c5887fb8312e0f6fd6f769577af7825.jpg" class="img-fluid w-100" alt=""></div>
+                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://imagenes.elpais.com/resizer/v2/GCWTGAAASNNOJJJG2SZY2HJ2XQ.jpg?auth=ea5df1419d3335871ae56dc636e85fdc678f4dc9cf7281bf4be42ec35211262f&width=414" class="img-fluid w-100" alt=""></div>
+                </div>
+            </div>           
+       
+    <!--1 foto-->
+    <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs-4">Cuando dominas Bootstrap...y lo sabes</div>
+                    <small class="align-bottom">02/13</small>
+                </div>
+                <img style="object-fit: cover;" src="https://imagenes.elpais.com/resizer/v2/GCWTGAAASNNOJJJG2SZY2HJ2XQ.jpg?auth=ea5df1419d3335871ae56dc636e85fdc678f4dc9cf7281bf4be42ec35211262f&width=414" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-2">
+                    <strong>10820145 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea nemo quaerat perferendis tempore necessitatibus voluptatem libero quis dicta blanditiis?</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs-4">No todo son memes</div>
+                    <small>03/16</small>
+                </div>
+                <img style="object-fit: cover;" src="https://www.dzoom.org.es/wp-content/uploads/2017/07/seebensee-2384369-810x540.jpg" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-2">
+                    <strong>448044 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique fugiat quibusdam quasi maiores adipisci illum tempora assumenda cum dicta error?</p>
+                </div>
+            </div>
+        </div>
+        <div class="row my-4">
+            <div class="col-6 mx-auto border rounded p-0">
+                <div class="d-flex p-2">
+                    <div class="w-100 fs-4">La última!!!</div>
+                    <small>08/26</small>
+                </div>
+                <img style="object-fit: cover;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYXj5GuWZh5UNBz4aG1iQe434KytGnZdyxcA&s" class="img-fluid w-100 col-12" alt=""/>
+                <div class="p-2">
+                    <strong>13 Likes</strong>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, nihil?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
